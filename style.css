@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #eef2f5;
+    color: #333;
+}
+
+header {
+    background-color: #1a252f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1250px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.main-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.invoice-panel {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+h2 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+select, input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 140px;
+}
+
+.btn-green {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-blue {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-green:hover { background-color: #219150; }
+.btn-blue:hover { background-color: #1f6391; }
+
+/* Tables */
+.data-table, .bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th, .data-table td,
+.bill-table th, .bill-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.data-table th, .bill-table th {
+    background-color: #f4f6f7;
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.total-section {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #c0392b;
+}
+
+.print-btn-container {
+    margin-top: 20px;
+}
+
+.btn-print {
+    width: 100%;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-print:hover { background-color: #d35400; }
+
+/* Print Settings */
+@media print {
+    .no-print { display: none !important; }
+    body { background: white; }
+    .container { display: block; margin: 0; }
+    .invoice-panel { box-shadow: none; width: 100%; }
+}
